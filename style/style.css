@@ -49,7 +49,6 @@ nav li a {
 }
 /* nav bar started ended here */
 
-
 /* banner started from here */
 
 .banner {
@@ -121,18 +120,41 @@ nav li a {
   font-weight: 600;
   background-color: #4ec5f7;
 }
-/* nav bar enden here */
+/* banner part ended here */
 
+/* we are gamer , part starts from here */
+.gamer {
+  display: flex;
+}
 
+.head-title2 {
+  font-weight: 700;
+  font-size: 3rem;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.know-more {
+  float: right;
+}
+.text-description {
+  color: #534c64;
+  font-size: 1.125rem;
+  text-align: right;
+}
 
-
-
-
+.purpose-description {
+  text-align: right;
+  color: #534c64;
+}
+/* we are gamer , part ended here */
 
 /* responsive media queries */
 /* mobile devices */
 @media screen and (max-width: 576px) {
-  nav {
+  nav,
+  .gamer {
     flex-direction: column;
   }
 
@@ -165,11 +187,66 @@ nav li a {
   .banner-content {
     padding: 0px 2px;
   }
+  .text-description {
+    text-align: center;
+    padding: 0px 10px;
+  }
+  .ralph {
+    width: 100%;
+  }
+  .we-are-gamer {
+    position: relative;
+  }
+  .know-more {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-top: 24px;
+    transform: translate(-50%, -50%);
+  }
+  .head-title2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+  }
+  .text-description,
+  .purpose-description,
+  .head-title2 {
+    text-align: center;
+  }
 }
 
 /* medium devices and tablet */
 @media screen and (min-width: 576px) and (max-width: 960px) {
+  nav{
+padding-left: 0px 10px 0px 0px;
+  }
+  .frame-img-sec img{
+    
+    padding: 0px 10px 0px 0px;
+  }
+ 
+  nav li {
+    margin-right: 18px ;
+  }
+ 
   .follow-us {
     width: 180px;
+  }
+  .banner-content{
+    padding: 0px 20px;
+  }
+  .group18{
+    padding-top: 40px;
+    width: 470px;
+    height: 100%;
+  }
+  .head-title2{
+    text-align: right;
+
+  }
+  .ralph{
+    margin-top: 170px;
+    width: 680px;
+height: 389px;
   }
 }
