@@ -3,27 +3,31 @@
 * {
   font-family: "Work Sans", sans-serif;
 }
+
 /* nav bar started from here */
 .frame-img-sec {
   display: flex;
   align-items: center;
 }
 
-h3 > img {
-  width: 86.041px;
-  height: 40px;
-  padding: 0px 20px;
+.head-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-left: 20px;
 }
 
-.head-title {
-  font-size: 2.8125rem;
+.g {
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 180px;
+  padding: 0px 70px 0px 150px;
 }
 
 nav > ul {
@@ -47,6 +51,7 @@ nav li a {
 
   border-radius: 8px;
 }
+
 /* nav bar started ended here */
 
 /* banner started from here */
@@ -80,7 +85,7 @@ nav li a {
 
 .goat {
   font-size: 5.937rem;
-  font-weight: 800;
+  font-weight: 900;
   background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -106,6 +111,8 @@ nav li a {
 }
 
 .btn-prime1 {
+  color: #fff;
+  font-size: 1.2rem;
   border: 0px;
   border-radius: 48px;
   padding: 21px 40px;
@@ -114,12 +121,15 @@ nav li a {
 }
 
 .btn-prime2 {
+  color: #fff;
+  font-size: 1.2rem;
   border: 0px;
   border-radius: 48px;
   padding: 21px 40px;
   font-weight: 600;
   background-color: #4ec5f7;
 }
+
 /* banner part ended here */
 
 /* we are gamer , part starts from here */
@@ -130,14 +140,17 @@ nav li a {
 .head-title2 {
   font-weight: 700;
   font-size: 3rem;
+  text-align: right;
   background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .know-more {
   float: right;
 }
+
 .text-description {
   color: #534c64;
   font-size: 1.125rem;
@@ -148,14 +161,125 @@ nav li a {
   text-align: right;
   color: #534c64;
 }
+
 /* we are gamer , part ended here */
+
+/* online game funny videos part starts from here */
+.online-head,
+.online-games {
+  text-align: center;
+}
+
+.online-head {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.cards {
+  justify-content: space-between;
+  display: flex;
+}
+.cards-description{
+  text-align: left;
+}
+.cards img {
+  width: 100%;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  max-width: 300px;
+}
+
+.card3 {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 14px;
+  width: 100%;
+  height: 83%;
+  background-color: rgba(12, 12, 12, 0.5);
+  /* Add an overlay color */
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.3s;
+  /* Add a smooth transition effect */
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #83c4b7;
+  
+  color: #000;
+  
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  /* Add a smooth transition effect */
+}
+
+.card3:hover .overlay {
+  opacity: 1;
+}
+
+.card3:hover .play-button {
+  opacity: 1;
+  
+}
+
+/* online game funny videos part ended here */
+
+/* 3rd anniversary part starts from here */
+.anniversary-head {
+  padding: 48px;
+}
+
+.anniversary-head p{
+   text-align: center;
+}
+.t3rd-anniversary {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  
+}
+.anniversary-pic{
+ 
+margin-left: 120px;
+}
+
+
+.angel-pic img {
+  bottom: 250px;
+  width: 318px;
+  position: relative;
+}
 
 /* responsive media queries */
 /* mobile devices */
 @media screen and (max-width: 576px) {
   nav,
-  .gamer {
+  .gamer,
+  .cards ,.t3rd-anniversary{
     flex-direction: column;
+  }
+
+  nav {
+    padding: 0px;
   }
 
   nav ul {
@@ -168,6 +292,11 @@ nav li a {
     margin-top: 15px;
   }
 
+  .follow-us a {
+    display: inline;
+    padding: 0px 5px;
+  }
+
   .banner img {
     width: 95%;
     height: auto;
@@ -175,7 +304,7 @@ nav li a {
   }
 
   .follow-us {
-    width: 180px;
+    width: 200px;
     padding: 10px 15px;
   }
 
@@ -187,66 +316,157 @@ nav li a {
   .banner-content {
     padding: 0px 2px;
   }
+
   .text-description {
     text-align: center;
     padding: 0px 10px;
   }
+
   .ralph {
     width: 100%;
   }
+
   .we-are-gamer {
     position: relative;
   }
+
   .know-more {
-    margin: 0;
+    padding: 17px;
+
+    font-size: 1rem;
     position: absolute;
     left: 50%;
     margin-top: 24px;
     transform: translate(-50%, -50%);
   }
+
   .head-title2 {
     font-size: 2.6rem;
     font-weight: 700;
   }
+
   .text-description,
   .purpose-description,
   .head-title2 {
     text-align: center;
   }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    max-width: auto;
+  }
+
+  .cards {
+    padding:0px 0px 0px 27px;
+  }
+
+  .cards p {
+    text-align: center;
+  }
+
+  .card3:hover .overlay {
+    opacity: 1;
+    
+  }
+
+  .card3:hover .play-button {
+    opacity: 1;
+    
+  }
+  .t3rd-anniversary{
+    gap: 0px;
+  }
+  .anniversary-head {
+    padding: 0px 4px;
+  }
+  .anniversary-pic {
+    width: 95%;
+    
+    margin-left: 20px;
+
+  }
+  .angel-pic img {
+    bottom: 100px;
+    width: 100px;
+  }
 }
 
 /* medium devices and tablet */
 @media screen and (min-width: 576px) and (max-width: 960px) {
-  nav{
-padding-left: 0px 10px 0px 0px;
+  nav {
+    padding: 0px;
   }
-  .frame-img-sec img{
-    
+
+  .frame-img-sec {
+    margin-right: 90px;
     padding: 0px 10px 0px 0px;
   }
- 
-  nav li {
-    margin-right: 18px ;
-  }
- 
+
   .follow-us {
-    width: 180px;
+    width: 200px;
+    margin-right: 10px;
   }
-  .banner-content{
+
+  .banner-content {
     padding: 0px 20px;
   }
-  .group18{
+
+  .group18 {
     padding-top: 40px;
     width: 470px;
     height: 100%;
   }
-  .head-title2{
-    text-align: right;
 
+  .head-title2 {
+    text-align: right;
   }
-  .ralph{
+
+  .ralph {
     margin-top: 170px;
     width: 680px;
-height: 389px;
+    height: 389px;
+  }
+
+  .know-more {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+  .cards{
+    gap: 10px;
+  }
+  .cards img{
+    height: 60%;
+    width: 200px;
+  }
+  .card3:hover .overlay {
+    opacity: 1;
+    
+  }
+
+  .card3:hover .play-button {
+    opacity: 1;
+    
+  }
+  .play-button{
+    text-align: center;
+  }
+  .t3rd-anniversary {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+  }
+  .anniversary-head{
+    padding-right: 10px;
+  }
+  .angel-pic img {
+    bottom: 150px;
+    width: 200px;   
+  }
+  .anniversary-pic{
+    margin-left: 30px;
+    width:400px
+  
   }
 }
